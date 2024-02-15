@@ -11,16 +11,16 @@
 // conditional: check if current time = current time + input time
 // if so, execute the code
 
-const secondInput = document.querySelector("#second-input");
-const minuteInput = document.querySelector("#minute-input");
-const hourInput = document.querySelector("#hour-input");
+const secondInput = document.querySelector("#second");
+const minuteInput = document.querySelector("#minute");
+const hourInput = document.querySelector("#hour");
 const startButton = document.querySelector("#btn");
 
 startButton.addEventListener("click", function () {
-  const seconds = parseInt(secondInput.value) || 0;
+  const seconds = parseInt(secondInput.value) || 0;   
   const minutes = parseInt((minuteInput.value) || 0) * 60;
   const hours = parseInt((hourInput.value) || 0) * 60 * 60;
-  const totalSeconds = Number(seconds + minutes + hours);
+  const totalSeconds = seconds + minutes + hours;
  
   startCountdown(totalSeconds);
 });
@@ -33,8 +33,8 @@ function startCountdown(time) {
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;
 
-    console.log('Seconds: ', seconds);
-    console.log('minutes: ', minutes);
+    // console.log('Seconds: ', seconds);
+    // console.log('minutes: ', minutes);
     
     document.querySelector(".countdown-hour").textContent = String(hours).padStart(2, "0");
     document.querySelector(".countdown-minute").textContent = String(minutes).padStart(2, "0");
@@ -42,8 +42,9 @@ function startCountdown(time) {
 
     // Check if the countdown has finished
     if (time <= 0) {
-      clearInterval(countdownInterval); // Stop the countdown
-      console.log("Countdown finished!");
+      clearInterval(countdownInterval); 
+      //play a sound. Beep beep beep
+      console.log('Time is up!')
     }
   }, 1000); 
 }
