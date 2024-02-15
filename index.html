@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Timer chrome extension</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <style>
       #hour {
         background-color: none;
@@ -16,13 +16,34 @@
 
   <body>
     <div class="container">
+      <h2 id="timer">Timer</h2>
       <div class="container-timer">
-        <p>Timer</p>
-        <input type="number" id="hour" name="hour" min="0" max="12" />
+        <input
+          type="number"
+          class="time-input"
+          id="hour"
+          name="hour"
+          min="0"
+          max="12"
+        />
         <p>hour</p>
-        <input type="number" id="minute" name="minute" min="0" max="59" />
+        <input
+          type="number"
+          class="time-input"
+          id="minute"
+          name="minute"
+          min="0"
+          max="59"
+        />
         <p>minute</p>
-        <input type="number" id="second" name="second" min="0" max="59" />
+        <input
+          type="number"
+          class="time-input"
+          id="second"
+          name="second"
+          min="0"
+          max="59"
+        />
         <p>second</p>
         <button id="btn">Start / Stop</button>
       </div>
