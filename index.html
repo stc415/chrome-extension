@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Timer chrome extension</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       #hour {
@@ -46,7 +49,7 @@
           max="59"
         />
         <p>second</p>
-        <button id="btn"><i class='bx bx-play' ></i></button>
+        <button id="btn"><i class="bx bx-play"></i></button>
       </div>
       <div class="countdown-box">
         <span class="countdown-hour">00</span>
@@ -56,6 +59,11 @@
         <span class="countdown-second">00</span>
       </div>
     </div>
+
+    <div class="message-container">
+      
+    </div>
   </body>
   <script src="main.js"></script>
+  <script src="background.js"></script>
 </html>

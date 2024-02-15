@@ -56,3 +56,24 @@ function startCountdown(time) {
     }
   }, 1000);
 }
+
+//fetch data from url
+fetch("https://type.fit/api/quotes")
+  .then((data) => data.json())
+  .then((data) => {
+    //store random quote in random
+    const random = data[Math.floor(Math.random() * data.length)];
+    //Going into DOM. Create p tag, set id, and assign text
+    const quote = document.createElement("p");
+    quote.setAttribute("id", "quote");
+    quote.textContent = `"${random.text}"`;
+    //Going into DOM. Create p tag, set id, and assign text
+    const author = document.createElement("p");
+    author.setAttribute("id", "author");
+    author.textContent = `by ${random.author}`;
+    //Going into DOM. select class message-container
+    const messageContainer = document.querySelector(".message-container");
+    messageContainer.appendChild(quote);
+    messageContainer.appendChild(author);
+  });
+

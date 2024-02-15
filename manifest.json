@@ -4,10 +4,13 @@
   "version": "1.0",
   "description": "timer and world time clock",
   "icons": {
-  "16": "img/wall-clock.png"
+    "16": "img/wall-clock.png"
   },
   "action": {
     "default_popup": "index.html",
     "default_icon": "img/wall-clock.png"
-}
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }
