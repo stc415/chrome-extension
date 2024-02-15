@@ -4,15 +4,31 @@
     <meta charset="UTF-8" />
     <title>Timer chrome extension</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <style>
+      #hour {
+        background-color: none;
+      }
+      .container-timer {
+        display: flex;
+      }
+    </style>
   </head>
 
   <body>
     <div class="container">
-      <div>
+      <div class="container-timer">
         <p>Timer</p>
-        <input type="number" id="hour" name="hour" min="0" max="12"><p>hour</p>
+        <input type="number" id="hour" name="hour" min="0" max="12" />
+        <p>hour</p>
+        <input type="number" id="minute" name="minute" min="0" max="59" />
+        <p>minute</p>
+        <input type="number" id="second" name="second" min="0" max="59" />
+        <p>second</p>
+        <button id="btn">Start / Stop</button>
       </div>
-      <div></div>
+      <div class="countdown-box">
+        <p>00:00:00</p>
+      </div>
     </div>
   </body>
   <script></script>
